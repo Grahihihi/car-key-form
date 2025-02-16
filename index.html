@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Dummy car key estimation project for Mister Minit BLACKTOWN</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dummy car key estimation project for Mister Minit BLACKTOWN</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>🔑 Mister Minit BLACKTOWN Car Key Price Estimation</h2>
+
+        <!-- Car Brand Selection -->
+        <label for="carBrand">Select Your Car Brand:</label>
+        <select id="carBrand" onchange="updateModels()">
+            <option value="">-- Select Brand --</option>
+            <option value="honda">Honda</option>
+            <option value="toyota">Toyota</option>
+            <option value="ford">Ford</option>
+        </select>
+
+        <!-- Car Model Selection -->
+        <div id="modelDiv" class="hidden">
+            <label for="carModel">Select Model:</label>
+            <select id="carModel" onchange="updateYears()"></select>
+        </div>
+
+        <!-- Car Year Selection -->
+        <div id="yearDiv" class="hidden">
+            <label for="carYear">Select Year:</label>
+            <select id="carYear" onchange="updateKeyType()"></select>
+        </div>
+
+        <!-- Key Type Selection -->
+        <div id="keyTypeDiv" class="hidden">
+            <label for="keyType">Select Key Type:</label>
+            <select id="keyType" onchange="calculatePrice()">
+                <option value="">-- Select Key Type --</option>
+                <option value="spare">Only Spare Key</option>
+                <option value="remote">Only Remote</option>
+                <option value="full">Full Car Key with Remote</option>
+            </select>
+        </div>
+
+        <!-- Price Output -->
+        <div id="priceOutput" class="hidden">
+            <h3>Estimated Repair Price: <span id="price"></span></h3>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
