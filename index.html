@@ -1,69 +1,66 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Dummy car key estimation project for Mister Minit BLACKTOWN</title>
-  <link rel="stylesheet" href="./style.css">
-
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dummy car key estimation project for Mister Minit BLACKTOWN</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Car Key Estimation | Mister Minit Blacktown</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <div class="form-container">
-        <h2>🔑 Mister Minit BLACKTOWN Car Key Price Estimation</h2>
+  <div class="form-container">
+    <h2>🔑 Mister Minit BLACKTOWN Car Key Price Estimation</h2>
 
-        <!-- Car Brand Selection -->
-        <label for="carBrand">Select Your Car Brand:</label>
-        <select id="carBrand" onchange="updateModels()">
-            <option value="">-- Select Brand --</option>
-            <option value="honda">Honda</option>
-            <option value="toyota">Toyota</option>
-            <option value="ford">Ford</option>
-        </select>
+    <!-- Car Brand Selection -->
+    <label for="carBrand">Select Your Car Brand:</label>
+    <select id="carBrand" onchange="updateModels()">
+      <option value="">-- Select Brand --</option>
+    </select>
 
-        <!-- Car Model Selection -->
-        <div id="modelDiv" class="hidden">
-            <label for="carModel">Select Model:</label>
-            <select id="carModel" onchange="updateYears()"></select>
-        </div>
-
-        <!-- Car Year Selection -->
-        <div id="yearDiv" class="hidden">
-            <label for="carYear">Select Year:</label>
-            <select id="carYear" onchange="updateKeyType()"></select>
-        </div>
-
-        <!-- Key Type Selection -->
-        <div id="keyTypeDiv" class="hidden">
-            <label for="keyType">Select Key Type:</label>
-            <select id="keyType" onchange="calculatePrice()">
-                <option value="">-- Select Key Type --</option>
-                <option value="spare">Only Spare Key</option>
-                <option value="remote">Only Remote</option>
-                <option value="full">Full Car Key with Remote</option>
-            </select>
-        </div>
-
-        <!-- Price Output -->
-        <div id="priceOutput" class="hidden">
-            <h3>Estimated Repair Price: <span id="price"></span></h3>
-        </div>
+    <!-- Car Model Selection -->
+    <div id="modelDiv" class="hidden">
+      <label for="carModel">Select Model:</label>
+      <select id="carModel" onchange="showYearInput()">
+        <option value="">-- Select Model --</option>
+      </select>
     </div>
 
-    <script src="script.js"></script>
-</body>
-</html>
-<!-- partial -->
-  <script  src="./script.js"></script>
+    <!-- Car Year Selection -->
+    <div id="yearDiv" class="hidden">
+      <label for="carYear">Select Year:</label>
+      <select id="carYear" onchange="calculatePrice()">
+        <option value="">-- Select Year --</option>
+      </select>
+    </div>
 
+    <!-- Final Price Output for Spare-Only Vehicles -->
+    <div id="priceOutputSpareOnly" class="hidden">
+      <h3>Estimated Price (Spare Key Only):</h3>
+      <ul style="list-style: none; padding-left: 0;">
+        <li>🗝️ Spare Key: <span id="priceSpareOnly"></span></li>
+        <li>🔑📡 Flip Key: ❌ Not Available</li>
+      </ul>
+    </div>
+
+    <!-- Final Price Output for Flip Key + Spare Key -->
+    <div id="priceOutputFlipKey" class="hidden">
+      <h3>Estimated Prices:</h3>
+      <ul style="list-style: none; padding-left: 0;">
+        <li>🗝️ Spare Key: <span id="priceSpare"></span></li>
+        <li>🔑📡 Spare Key with Remote (Flip Key): <span id="priceFlip"></span></li>
+      </ul>
+    </div>
+
+    <!-- Default Error Output -->
+    <div id="priceOutputNotAvailable" class="hidden">
+      <h3>Prices Not Available for Selected Make/Model/Year</h3>
+      <ul style="list-style: none; padding-left: 0;">
+        <li>🗝️ Spare Key: ❌</li>
+        <li>🔑📡 Flip Key: ❌</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
