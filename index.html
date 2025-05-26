@@ -8,65 +8,68 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <img src="mister-minit-logo.png" alt="Mister Minit Logo" />
-    <h1>Mister Minit Blacktown | Car Key Price Estimator</h1>
-  </header>
+  <div class="wrapper">
+    <header>
+      <div class="header-row">
+        <img src="mister-minit-logo.png" alt="Mister Minit Logo" />
+        <h1 class="title-animate">Mister Minit Blacktown | Car Key Price Estimator</h1>
+      </div>
+    </header>
 
-  <div class="form-container">
-    <label for="carBrand">Select Your Car Brand:</label>
-    <select id="carBrand" onchange="updateModels()">
-      <option value="">-- Select Brand --</option>
-    </select>
-
-    <div id="modelDiv" class="hidden">
-      <label for="carModel">Select Model:</label>
-      <select id="carModel" onchange="showYearInput()">
-        <option value="">-- Select Model --</option>
+    <main class="form-container">
+      <label for="carBrand">Select Your Car Brand:</label>
+      <select id="carBrand" onchange="updateModels()">
+        <option value="">-- Select Brand --</option>
       </select>
-    </div>
 
-    <div id="yearDiv" class="hidden">
-      <label for="carYear">Select Year:</label>
-      <select id="carYear" onchange="calculatePrice()">
-        <option value="">-- Select Year --</option>
-      </select>
-    </div>
+      <div id="modelDiv" class="hidden">
+        <label for="carModel">Select Model:</label>
+        <select id="carModel" onchange="showYearInput()">
+          <option value="">-- Select Model --</option>
+        </select>
+      </div>
 
-    <div id="priceOutputSpareOnly" class="hidden">
-      <h3>Estimated Price (Spare Key Only)</h3>
-      <ul>
-        <li>🗝️ Spare Key: <span id="priceSpareOnly"></span></li>
-        <li>🔑📡 Flip Key: ❌ Not Available</li>
-      </ul>
-    </div>
+      <div id="yearDiv" class="hidden">
+        <label for="carYear">Select Year:</label>
+        <select id="carYear" onchange="calculatePrice()">
+          <option value="">-- Select Year --</option>
+        </select>
+      </div>
 
-    <div id="priceOutputFlipKey" class="hidden">
-      <h3>Estimated Prices</h3>
-      <ul>
-        <li>🗝️ Spare Key: <span id="priceSpare"></span></li>
-        <li>🔑📡 Flip Key with Remote: <span id="priceFlip"></span></li>
-      </ul>
-    </div>
+      <div id="priceOutputSpareOnly" class="hidden">
+        <h3>Estimated Price (Spare Key Only)</h3>
+        <ul>
+          <li>🗝️ Spare Key: <span id="priceSpareOnly"></span></li>
+          <li>🔑📡 Flip Key: ❌ Not Available</li>
+        </ul>
+      </div>
 
-    <div id="priceOutputNotAvailable" class="hidden">
-      <h3>Prices Not Available</h3>
-      <ul>
-        <li>🗝️ Spare Key: ❌</li>
-        <li>🔑📡 Flip Key: ❌</li>
-      </ul>
-    </div>
+      <div id="priceOutputFlipKey" class="hidden">
+        <h3>Estimated Prices</h3>
+        <ul>
+          <li>🗝️ Spare Key: <span id="priceSpare"></span></li>
+          <li>🔑📡 Flip Key with Remote: <span id="priceFlip"></span></li>
+        </ul>
+      </div>
+
+      <div id="priceOutputNotAvailable" class="hidden">
+        <h3>Prices Not Available</h3>
+        <ul>
+          <li>🗝️ Spare Key: ❌</li>
+          <li>🔑📡 Flip Key: ❌</li>
+        </ul>
+      </div>
+    </main>
   </div>
 
   <footer>
     &copy; 2025 Mister Minit Blacktown. All rights reserved.<br />
-    📍 Shop 123, Westpoint Shopping Centre, Blacktown NSW<br />
-    ☎️ (02) 9876 5432 &nbsp; | &nbsp; ✉️ contact@minitblacktown.com.au<br />
-    <small style="font-size: 12px; color: #ccc;">
-      👨‍💻 Developed by Grahi Brahmbhatt | 📧 grahibrahmbhatt0202@gmail.com
-    </small>
+  📍 Shop 123, Westpoint Shopping Centre, Blacktown NSW<br />
+  ☎️ (02) 9876 5432 &nbsp; | &nbsp; ✉️ contact@minitblacktown.com.au<br />
+  <small style="font-size: 12px; color: #ccc;">
+    👨‍💻 Developed by Grahi Brahmbhatt | 📧 grahibrahmbhatt0202@gmail.com
+  </small>
   </footer>
-  
 
   <script src="script.js"></script>
 </body>
