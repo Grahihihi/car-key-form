@@ -2,22 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Car Key Estimation | Mister Minit Blacktown</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mister Minit Blacktown | Car Key Price Estimator</title>
+  <link rel="icon" href="mister-minit-logo.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header>
+    <img src="mister-minit-logo.png" alt="Mister Minit Logo" />
+    <h1>Mister Minit Blacktown | Car Key Price Estimator</h1>
+  </header>
 
   <div class="form-container">
-    <h2>🔑 Mister Minit BLACKTOWN Car Key Price Estimation</h2>
-
-    <!-- Car Brand Selection -->
     <label for="carBrand">Select Your Car Brand:</label>
     <select id="carBrand" onchange="updateModels()">
       <option value="">-- Select Brand --</option>
     </select>
 
-    <!-- Car Model Selection -->
     <div id="modelDiv" class="hidden">
       <label for="carModel">Select Model:</label>
       <select id="carModel" onchange="showYearInput()">
@@ -25,7 +26,6 @@
       </select>
     </div>
 
-    <!-- Car Year Selection -->
     <div id="yearDiv" class="hidden">
       <label for="carYear">Select Year:</label>
       <select id="carYear" onchange="calculatePrice()">
@@ -33,33 +33,40 @@
       </select>
     </div>
 
-    <!-- Final Price Output for Spare-Only Vehicles -->
     <div id="priceOutputSpareOnly" class="hidden">
-      <h3>Estimated Price (Spare Key Only):</h3>
-      <ul style="list-style: none; padding-left: 0;">
+      <h3>Estimated Price (Spare Key Only)</h3>
+      <ul>
         <li>🗝️ Spare Key: <span id="priceSpareOnly"></span></li>
         <li>🔑📡 Flip Key: ❌ Not Available</li>
       </ul>
     </div>
 
-    <!-- Final Price Output for Flip Key + Spare Key -->
     <div id="priceOutputFlipKey" class="hidden">
-      <h3>Estimated Prices:</h3>
-      <ul style="list-style: none; padding-left: 0;">
+      <h3>Estimated Prices</h3>
+      <ul>
         <li>🗝️ Spare Key: <span id="priceSpare"></span></li>
-        <li>🔑📡 Spare Key with Remote (Flip Key): <span id="priceFlip"></span></li>
+        <li>🔑📡 Flip Key with Remote: <span id="priceFlip"></span></li>
       </ul>
     </div>
 
-    <!-- Default Error Output -->
     <div id="priceOutputNotAvailable" class="hidden">
-      <h3>Prices Not Available for Selected Make/Model/Year</h3>
-      <ul style="list-style: none; padding-left: 0;">
+      <h3>Prices Not Available</h3>
+      <ul>
         <li>🗝️ Spare Key: ❌</li>
         <li>🔑📡 Flip Key: ❌</li>
       </ul>
     </div>
   </div>
+
+  <footer>
+    &copy; 2025 Mister Minit Blacktown. All rights reserved.<br />
+    📍 Shop 123, Westpoint Shopping Centre, Blacktown NSW<br />
+    ☎️ (02) 9876 5432 &nbsp; | &nbsp; ✉️ contact@minitblacktown.com.au<br />
+    <small style="font-size: 12px; color: #ccc;">
+      👨‍💻 Developed by Grahi Brahmbhatt | 📧 grahibrahmbhatt0202@gmail.com
+    </small>
+  </footer>
+  
 
   <script src="script.js"></script>
 </body>
