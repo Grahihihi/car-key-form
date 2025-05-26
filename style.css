@@ -20,31 +20,34 @@ body::before {
 
 header {
   background-color: #003366;
-  padding: 12px 20px;
+  padding: 14px 16px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 header img {
-  height: 55px;
-  margin-right: 12px;
+  height: 50px;
+  margin-bottom: 6px;
   animation: logoBounce 1s ease-in-out;
 }
 
 header h1 {
   color: #ffffff;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
-  margin: 0;
+  margin: 10px 0 0 0;
+  width: 100%;
 }
 
 .form-container {
-  max-width: 480px;
-  margin: 30px auto;
-  padding: 25px;
+  max-width: 95%;
+  margin: 20px auto;
+  padding: 20px;
   background-color: #f4f4f4;
   border: 1px solid #ccc;
   border-radius: 12px;
@@ -55,7 +58,7 @@ header h1 {
 label {
   display: block;
   margin-bottom: 5px;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: bold;
   color: #003366;
 }
@@ -78,7 +81,7 @@ select:hover {
 
 h3 {
   color: #E60012;
-  font-size: 18px;
+  font-size: 17px;
   margin-top: 20px;
 }
 
@@ -99,12 +102,13 @@ ul li {
 footer {
   background-color: #003366;
   color: #ffffff;
-  padding: 14px;
+  padding: 16px 10px;
   text-align: center;
-  font-size: 14px;
+  font-size: 13px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
+  line-height: 1.4;
 }
 
 /* Animations */
@@ -125,18 +129,25 @@ footer {
   100% { transform: scale(1); }
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
-  .form-container {
-    width: 90%;
-    margin: 20px auto;
+/* Mobile Optimization */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 16px;
   }
 
   header img {
-    height: 45px;
+    height: 40px;
   }
 
-  header h1 {
-    font-size: 18px;
+  label, select, h3, ul li {
+    font-size: 14px;
+  }
+
+  .form-container {
+    padding: 15px;
+  }
+
+  footer {
+    font-size: 12px;
   }
 }
